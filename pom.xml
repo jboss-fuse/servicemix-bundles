@@ -47,6 +47,7 @@
         <module>xerces-2.12.1</module>
         <module>spring-beans-5.2.13.RELEASE</module>
         <module>spring-expression-5.2.13.RELEASE</module>
+        <module>spring-context-support-5.2.13.RELEASE</module>
         <module>aopalliance-1.0</module>
     </modules>
 
