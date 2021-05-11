@@ -52,6 +52,7 @@
         <module>spring-context-5.2.13.RELEASE</module>
         <module>spring-core-5.2.13.RELEASE</module>
         <module>spring-jdbc-5.2.13.RELEASE</module>
+        <module>spring-tx-5.2.13.RELEASE</module>
         <module>aopalliance-1.0</module>
         <module>cglib-3.2.4</module>
         <module>javax-inject-1</module>
