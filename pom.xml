@@ -64,6 +64,7 @@
         <module>reflections-0.9.11</module>
         <module>jsch-0.1.54</module>
         <module>rhino-1.7.7.1</module>
+        <module>javax-el-impl-3.0.0</module>
     </modules>
 
 </project>
