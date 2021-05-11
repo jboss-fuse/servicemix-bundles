@@ -55,6 +55,7 @@
         <module>cglib-3.2.4</module>
         <module>javax-inject-1</module>
         <module>not-yet-commons-ssl-0.3.11</module>
+        <module>jaxb-xjc-2.3.1</module>
     </modules>
 
 </project>
