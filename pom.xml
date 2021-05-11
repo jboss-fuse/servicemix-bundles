@@ -49,6 +49,7 @@
         <module>spring-expression-5.2.13.RELEASE</module>
         <module>spring-context-support-5.2.13.RELEASE</module>
         <module>spring-aop-5.2.13.RELEASE</module>
+        <module>spring-context-5.2.13.RELEASE</module>
         <module>aopalliance-1.0</module>
     </modules>
 
