@@ -42,6 +42,7 @@
 
     <modules>
         <module>xalan-2.7.2</module>
+        <module>xalan-serializer-2.7.2</module>
     </modules>
 
 </project>
