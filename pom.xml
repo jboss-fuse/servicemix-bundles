@@ -36,11 +36,12 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.pom</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>1.redhat-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
+        <module>xalan-2.7.2</module>
     </modules>
 
 </project>
