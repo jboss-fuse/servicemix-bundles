@@ -67,6 +67,7 @@
         <module>javax-el-impl-3.0.0</module>
         <module>saaj-impl-1.3.23</module>
         <module>xmlresolver-1.2</module>
+        <module>bcel-5.2</module>
     </modules>
 
 </project>
