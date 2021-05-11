@@ -63,6 +63,7 @@
         <module>wsdl4j-1.6.3</module>
         <module>reflections-0.9.11</module>
         <module>jsch-0.1.54</module>
+        <module>rhino-1.7.7.1</module>
     </modules>
 
 </project>
