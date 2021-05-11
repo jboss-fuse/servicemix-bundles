@@ -30,7 +30,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-beans</artifactId>
-    <version>5.2.13.RELEASE_2.redhat-SNAPSHOT</version>
+    <version>5.2.13.RELEASE_1.redhat-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 

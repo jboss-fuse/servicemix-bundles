@@ -46,6 +46,7 @@
         <module>xalan-serializer-2.7.2</module>
         <module>xerces-2.12.1</module>
         <module>spring-beans-5.2.13.RELEASE</module>
+        <module>aopalliance-1.0</module>
     </modules>
 
 </project>
