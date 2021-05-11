@@ -43,6 +43,7 @@
     <modules>
         <module>xalan-2.7.2</module>
         <module>xalan-serializer-2.7.2</module>
+        <module>xerces-2.12.1</module>
     </modules>
 
 </project>
