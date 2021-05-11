@@ -72,6 +72,7 @@
         <module>opensaml-3.3.0</module>
         <module>fastinfoset-1.2.16</module>
         <module>serp-1.14.1</module>
+        <module>ant-1.7.0</module>
     </modules>
 
 </project>
