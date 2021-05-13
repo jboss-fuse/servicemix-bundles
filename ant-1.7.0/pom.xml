@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <!--
@@ -23,17 +24,16 @@
     <parent>
 	    <groupId>org.apache.servicemix.bundles</groupId>
 	    <artifactId>bundles-pom</artifactId>
-	    <version>1-SNAPSHOT</version>
+	    <version>15.redhat-SNAPSHOT</version>
+	    <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.ant</artifactId>
     <packaging>bundle</packaging>
-    <version>1.7.0_1-SNAPSHOT</version>
-    <name>Apache ServiceMix Bundles: ${pkgArtifactId}-${pkgVersion}</name>
-    <description>
-        This bundle simply wraps ${pkgArtifactId}-${pkgVersion}.jar.
-    </description>
+    <version>1.7.0_6.redhat-SNAPSHOT</version>
+    <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
+    <description>This OSGi bundle wraps ant and ant-launcher ${pkgVersion} jar files.</description>
 
     <properties>
         <pkgGroupId>org.apache.ant</pkgGroupId>
@@ -41,14 +41,14 @@
         <pkgVersion>1.7.0</pkgVersion>
         <servicemix.osgi.export.pkg>org.apache.tools</servicemix.osgi.export.pkg>
         <servicemix.osgi.import.pkg>
-            com.sun.tools.javac*;resolution:=optional,
-            org.apache.env*;resolution:=optional,
-            org.apache.tools.ant.taskdefs.optional*;resolution:=optional,
-            org.apache.tools.ant.util.java15*;resolution:=optional,
-            sun.rmi*;resolution:=optional,
-            sun.tools.javac*;resolution:=optional,
+            !org.apache.tools*,
+            !com.sun.tools.javac*,
+            !org.apache.env*,
+            !sun.rmi*,
+            !sun.tools.javac*,
             *
         </servicemix.osgi.import.pkg>
+        <servicemix.osgi.failok>true</servicemix.osgi.failok>
     </properties>
 
     <dependencies>
@@ -64,6 +64,24 @@
             <version>${pkgVersion}</version>
             <optional>true</optional>
         </dependency>
+
+        <!-- sources -->
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>ant</artifactId>
+            <version>${pkgVersion}</version>
+            <classifier>sources</classifier>
+            <optional>true</optional>
+        </dependency>
+        <!-- Not available on central
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant-launcher</artifactId>
+            <version>${pkgVersion}</version>
+            <classifier>sources</classifier>
+            <optional>true</optional>
+        </dependency>
+        -->
     </dependencies>
 
     <build>
@@ -106,5 +124,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

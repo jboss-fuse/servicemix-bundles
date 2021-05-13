@@ -1,0 +1,17 @@
+\u001B[1mSYNOPSIS\u001B[0m
+    ${project.description}
+
+    Original Maven URL:
+        \u001B[33mmvn:${pkgGroupId}/${pkgArtifactId}/${pkgVersion}\u001B[0m
+
+\u001B[1mDESCRIPTION\u001B[0m
+    The AOP Alliance project is a joint open-source project between software engineering people who are
+    interested in AOP and Java.
+
+    Aspect-Oriented Programming (AOP) offers a better solution to many problems than do existing technologies
+    such as EJB. AOP Alliance intends to facilitate and standardize the use of AOP to enhance existing
+    middleware environment (such as JEE), or development environments (e.g. Eclipse). The AOP Alliance also
+    aims to ensure interoperability between Java/JEE AOP implementations.
+
+\u001B[1mSEE ALSO\u001B[0m
+    \u001B[36mhttp://aopalliance.sourceforge.net/\u001B[0m
