@@ -23,7 +23,7 @@
     <artifactId>bundles-pom</artifactId>
     <groupId>org.apache.servicemix.bundles</groupId>
     <version>13</version>
-    <relativePath>../bundles-pom/pom.xml/pom.xml</relativePath>
+    <relativePath>../bundles-pom/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.servicemix.bundles</groupId>
