@@ -36,7 +36,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.pom</artifactId>
-    <version>1.redhat-SNAPSHOT</version>
+    <version>1.fuse-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Apache ServiceMix :: Bundles</name>
 
