@@ -24,14 +24,14 @@
     <parent>
         <groupId>org.apache.servicemix.bundles</groupId>
         <artifactId>bundles-pom</artifactId>
-        <version>15.fuse-SNAPSHOT</version>
+        <version>15-fuse-SNAPSHOT</version>
         <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0_6.fuse-SNAPSHOT</version>
+    <version>1.0_6-fuse-SNAPSHOT</version>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
