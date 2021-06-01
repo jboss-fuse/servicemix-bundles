@@ -24,14 +24,14 @@
     <parent>
         <groupId>org.apache.servicemix.bundles</groupId>
         <artifactId>bundles-pom</artifactId>
-        <version>15-SNAPSHOT</version>
+        <version>15.redhat-SNAPSHOT</version>
         <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.not-yet-commons-ssl</artifactId>
     <packaging>bundle</packaging>
-    <version>0.3.11_1-SNAPSHOT</version>
+    <version>0.3.11_1.redhat-SNAPSHOT</version>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
     <description>This OSGi bundle wraps not-yet-commons-ssl ${pkgVersion} jar file.</description>
 
