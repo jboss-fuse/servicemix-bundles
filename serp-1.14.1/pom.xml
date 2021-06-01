@@ -23,7 +23,7 @@
     <parent>
         <artifactId>bundles-pom</artifactId>
         <groupId>org.apache.servicemix.bundles</groupId>
-        <version>15.redhat-SNAPSHOT</version>
+        <version>15-SNAPSHOT</version>
         <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
@@ -31,7 +31,7 @@
     <artifactId>org.apache.servicemix.bundles.serp</artifactId>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
-    <version>1.14.1_1.redhat-SNAPSHOT</version>
+    <version>1.14.1_1-SNAPSHOT</version>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
     <properties>
