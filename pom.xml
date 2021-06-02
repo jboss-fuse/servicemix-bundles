@@ -64,6 +64,11 @@
         <module>spring-security-web-5.4.6</module>
         <module>spring-security-acl-5.4.6</module>
         <module>spring-security-taglibs-5.4.6</module>
+        <module>spring-security-core-5.3.8.RELEASE</module>
+        <module>spring-security-config-5.3.8.RELEASE</module>
+        <module>spring-security-web-5.3.8.RELEASE</module>
+        <module>spring-security-acl-5.3.8.RELEASE</module>
+        <module>spring-security-taglibs-5.3.8.RELEASE</module>
         <module>spring-test-5.2.13.RELEASE</module>
         <module>spring-web-5.2.13.RELEASE</module>
         <module>spring-webmvc-5.2.13.RELEASE</module>
@@ -75,6 +80,7 @@
         <module>jaxb-xjc-2.3.1</module>
         <module>jaxb-runtime-2.3.1</module>
         <module>jasypt-1.9.3</module>
+        <module>jasypt-spring31-1.9.3</module>
         <module>wsdl4j-1.6.3</module>
         <module>reflections-0.9.11</module>
         <module>jsch-0.1.54</module>

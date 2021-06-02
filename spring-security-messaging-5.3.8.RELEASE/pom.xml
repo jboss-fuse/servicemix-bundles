@@ -29,34 +29,27 @@
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
-    <artifactId>org.apache.servicemix.bundles.jasypt-spring31</artifactId>
-    <version>1.9.3.2-fuse-SNAPSHOT</version>
+    <artifactId>org.apache.servicemix.bundles.spring-security-messaging</artifactId>
+    <version>5.3.8.RELEASE-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
-    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
     <scm>
         <connection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=servicemix-bundles.git</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <properties>
-        <pkgGroupId>org.jasypt</pkgGroupId>
-        <pkgArtifactId>jasypt-spring31</pkgArtifactId>
-        <pkgVersion>1.9.3</pkgVersion>
+        <pkgGroupId>org.springframework.security</pkgGroupId>
+        <pkgArtifactId>spring-security-messaging</pkgArtifactId>
+        <pkgVersion>5.3.8.RELEASE</pkgVersion>
         <servicemix.osgi.export.pkg>
-            org.jasypt.spring31
+            org.springframework.security.messaging
         </servicemix.osgi.export.pkg>
         <servicemix.osgi.import.pkg>
-            org.jasypt*,
-            org.springframework.beans*,
-            org.springframework.context*,
-            org.springframework.core*,
-            org.springframework.util*,
-            org.springframework.web*;resolution:=optional,
-            org.w3c.dom
+            *
         </servicemix.osgi.import.pkg>
     </properties>
 
@@ -67,7 +60,7 @@
             <version>${pkgVersion}</version>
         </dependency>
 
-        <!--sources -->
+        <!-- sources -->
         <dependency>
             <groupId>${pkgGroupId}</groupId>
             <artifactId>${pkgArtifactId}</artifactId>
