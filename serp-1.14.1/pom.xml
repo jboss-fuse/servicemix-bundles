@@ -31,7 +31,7 @@
     <artifactId>org.apache.servicemix.bundles.serp</artifactId>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
-    <version>1.14.1_1-fuse-SNAPSHOT</version>
+    <version>1.14.1.1-fuse-SNAPSHOT</version>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
 
     <properties>
