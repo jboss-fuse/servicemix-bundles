@@ -29,59 +29,45 @@
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
-    <artifactId>org.apache.servicemix.bundles.dom4j</artifactId>
-    <version>2.1.3.2-fuse-SNAPSHOT</version>
+    <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
     <packaging>bundle</packaging>
+    <version>3.2.12.1-fuse-SNAPSHOT</version>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
-    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion} jar file.</description>
+    <description>This OSGi bundle wraps cglib-nodep ${pkgVersion} jar file.</description>
 
     <scm>
         <connection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/servicemix-bundles.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=servicemix-bundles.git</url>
-    <tag>HEAD</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <properties>
-        <pkgGroupId>org.dom4j</pkgGroupId>
-        <pkgArtifactId>dom4j</pkgArtifactId>
-        <pkgVersion>2.1.3</pkgVersion>
+        <pkgGroupId>cglib</pkgGroupId>
+        <pkgArtifactId>cglib</pkgArtifactId>
+        <pkgVersion>3.2.12</pkgVersion>
         <servicemix.osgi.export.pkg>
-            org.dom4j
+            net.sf.cglib
         </servicemix.osgi.export.pkg>
         <servicemix.osgi.import.pkg>
-            javax.xml.namespace,
-            javax.xml.parsers,
-            javax.xml.transform*,
-            org.w3c.dom,
-            org.xml.sax*,
-            javax.xml.stream*;version="[1.0,2)",
-            javax.swing*;resolution:=optional,
-            com.sun.msv.datatype*;resolution:=optional,
-            javax.xml.bind*;resolution:=optional;version="[2.0,3)",
-            org.gjt.xpp;resolution:=optional;version="[2,3)",
-            org.jaxen*;resolution:=optional;version="[1.1.6,2)",
-            org.relaxng.datatype;resolution:=optional;version="[1,2)",
-            org.xmlpull.v1;resolution:=optional;version="[1.1.3,2)",
-            org.xmlpull.mxp1;resolution:=optional;version="[1.1.3,2)"
+            net.sf.cglib.asm.util;resolution:=optional,
+            org.apache.tools.ant*;version="[1.6,2)";resolution:=optional
         </servicemix.osgi.import.pkg>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>${pkgGroupId}</groupId>
-            <artifactId>${pkgArtifactId}</artifactId>
+            <artifactId>${pkgArtifactId}-nodep</artifactId>
             <version>${pkgVersion}</version>
-            <optional>true</optional>
         </dependency>
 
         <!-- sources -->
         <dependency>
             <groupId>${pkgGroupId}</groupId>
-            <artifactId>${pkgArtifactId}</artifactId>
+            <artifactId>${pkgArtifactId}-nodep</artifactId>
             <version>${pkgVersion}</version>
             <classifier>sources</classifier>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -99,24 +85,21 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>${pkgGroupId}:${pkgArtifactId}</include>
+                                    <include>${pkgGroupId}:${pkgArtifactId}-nodep</include>
                                 </includes>
                             </artifactSet>
                             <filters>
                                 <filter>
-                                    <artifact>${pkgGroupId}:${pkgArtifactId}</artifact>
+                                    <artifact>${pkgGroupId}:${pkgArtifactId}-nodep</artifact>
                                     <excludes>
                                         <exclude>**</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
-                            <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>
