@@ -41,8 +41,8 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-        <module>jaxb-runtime-2.3.1</module>
-        <module>jaxb-xjc-2.3.1</module>
+        <module>jaxb-xjc-2.3.2</module>
+        <module>jaxb-runtime-2.3.2</module>
     </modules>
 
 </project>
