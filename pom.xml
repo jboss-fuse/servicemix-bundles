@@ -43,6 +43,7 @@
     <modules>
         <module>jaxb-xjc-2.3.2</module>
         <module>jaxb-runtime-2.3.2</module>
+        <module>okhttp-3.12.0</module>
     </modules>
 
 </project>
