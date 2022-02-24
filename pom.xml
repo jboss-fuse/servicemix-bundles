@@ -41,7 +41,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-        <module>kafka-clients-2.6.3</module>
+        <module>xerces-2.12.2</module>
     </modules>
 
 </project>
