@@ -68,6 +68,13 @@
         <module>spring-jms-5.3.16</module>
         <module>spring-orm-5.3.16</module>
         <module>spring-tx-5.3.16</module>
+        <module>spring-test-5.3.16</module>
+        <module>spring-messaging-5.3.16</module>
+        <module>spring-instrument-5.3.16</module>
+        <module>spring-web-5.3.16</module>
+        <module>spring-webmvc-5.3.16</module>
+        <module>spring-oxm-5.3.16</module>
+        <module>spring-aspects-5.3.16</module>
     </modules>
 
 </project>
