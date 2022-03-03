@@ -41,6 +41,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
+        <module>bundles-pom</module>
         <module>spring-aop-5.3.16</module>
         <module>spring-aspects-5.3.16</module>
         <module>spring-beans-5.3.16</module>
