@@ -60,6 +60,7 @@
         <module>spring-web-5.3.16</module>
         <module>spring-webmvc-5.3.16</module>
         <module>spring-websocket-5.3.16</module>
+        <module>grpc-1.23.0</module>
     </modules>
 
 </project>
