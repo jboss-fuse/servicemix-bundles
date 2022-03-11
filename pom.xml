@@ -41,7 +41,6 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-        <module>bundles-pom</module>
         <module>grpc-1.23.0</module>
     </modules>
 
