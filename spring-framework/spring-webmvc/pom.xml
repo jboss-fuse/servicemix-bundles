@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Licensed to the Apache Software Foundation (ASF) under one or more
+	contributor license agreements.  See the NOTICE file distributed with
+	this work for additional information regarding copyright ownership.
+	The ASF licenses this file to You under the Apache License, Version 2.0
+	(the "License"); you may not use this file except in compliance with
+	the License.  You may obtain a copy of the License at
+
+	   http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.apache.servicemix.bundles</groupId>
+		<artifactId>bundles-pom</artifactId>
+		<version>15</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.apache.servicemix.bundles</groupId>
+	<artifactId>org.apache.servicemix.bundles.spring-webmvc</artifactId>
+	<version>5.3.24_1-fuse-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	<name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
+
+	<scm>
+		<connection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</connection>
+		<developerConnection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</developerConnection>
+		<url>https://github.com/jboss-fuse/servicemix-bundles</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<pkgGroupId>org.springframework</pkgGroupId>
+		<pkgArtifactId>spring-webmvc</pkgArtifactId>
+		<pkgVersion>5.3.24</pkgVersion>
+		<servicemix.osgi.source.version>5.3.24.1</servicemix.osgi.source.version>
+		<servicemix.osgi.export.pkg>
+			org.springframework.web.servlet
+		</servicemix.osgi.export.pkg>
+		<servicemix.osgi.import.pkg>
+			com.fasterxml.jackson.annotation;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.core;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.databind;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.databind.ser;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.dataformat.cbor;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.dataformat.smile;version="[2,3)";resolution:=optional,
+			com.fasterxml.jackson.dataformat.xml;version="[2,3)";resolution:=optional,
+			com.lowagie.text;version="[2,3)";resolution:=optional,
+			com.lowagie.text.pdf;version="[2,3)";resolution:=optional,
+			com.rometools.rome.feed;version="[1.5,2)";resolution:=optional,
+			com.rometools.rome.feed.atom;version="[1.5,2)";resolution:=optional,
+			com.rometools.rome.feed.rss;version="[1.5,2)";resolution:=optional,
+			com.rometools.rome.io;version="[1.5,2)";resolution:=optional,
+			freemarker.cache;version="[2.3,3)";resolution:=optional,
+			freemarker.core;version="[2.3,3)";resolution:=optional,
+			freemarker.ext.jsp;version="[2.3,3)";resolution:=optional,
+			freemarker.ext.servlet;version="[2.3,3)";resolution:=optional,
+			freemarker.template;version="[2.3,3)";resolution:=optional,
+			groovy.lang;version="[3,4)";resolution:=optional,
+			groovy.text;version="[3,4)";resolution:=optional,
+			groovy.text.markup;version="[3,4)";resolution:=optional,
+			javax.el;resolution:=optional,
+			javax.script;resolution:=optional,
+			javax.servlet,
+			javax.servlet.http,
+			javax.servlet.jsp;resolution:=optional,
+			javax.servlet.jsp.el;resolution:=optional,
+			javax.servlet.jsp.jstl.core;resolution:=optional,
+			javax.servlet.jsp.jstl.fmt;resolution:=optional,
+			javax.servlet.jsp.tagext;resolution:=optional,
+			javax.validation;resolution:=optional,
+			javax.xml.bind;resolution:=optional,
+			javax.xml.transform;resolution:=optional,
+			javax.xml.transform.dom;resolution:=optional,
+			javax.xml.transform.stream;resolution:=optional,
+			org.aopalliance.aop;version="[1,2)";resolution:=optional,
+			org.aopalliance.intercept;version="[1,2)";resolution:=optional,
+			org.apache.commons.logging;version="[1.1.1,2)";resolution:=optional,
+			org.apache.poi.hssf.usermodel;version="[3,4)";resolution:=optional,
+			org.apache.poi.ss.usermodel;version="[3,4)";resolution:=optional,
+			org.apache.poi.xssf.streaming;version="[3,4)";resolution:=optional,
+			org.apache.poi.xssf.usermodel;version="[3,4)";resolution:=optional,
+			org.apache.tiles;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.access;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.definition;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.definition.dao;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.definition.digester;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.el;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.evaluator;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.evaluator.impl;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.extras.complete;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.factory;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.impl.mgmt;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.locale;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.locale.impl;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.preparer;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.preparer.factory;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.renderer;version="[2.2,4)";resolution:=optional,
+			org.apache.tiles.request;version="[1,2)";resolution:=optional,
+			org.apache.tiles.request.locale;version="[1,2)";resolution:=optional,
+			org.apache.tiles.request.render;version="[1,2)";resolution:=optional,
+			org.apache.tiles.request.servlet;version="[1,2)";resolution:=optional,
+			org.apache.tiles.startup;version="[2.2,4)";resolution:=optional,
+			org.reactivestreams;version="[1.0,2)";resolution:=optional,
+			org.springframework.aop.framework;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.aop.support;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.aop.target;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.beans;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory.config;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory.parsing;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory.support;version="[${pkgVersion},5.4)",
+			org.springframework.beans.factory.xml;version="[${pkgVersion},5.4)",
+			org.springframework.cache;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.cache.concurrent;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.cglib.core;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.cglib.proxy;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.cglib.reflect;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.context;version="[${pkgVersion},5.4)",
+			org.springframework.context.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.context.event;version="[${pkgVersion},5.4)",
+			org.springframework.context.expression;version="[${pkgVersion},5.4)",
+			org.springframework.context.i18n;version="[${pkgVersion},5.4)",
+			org.springframework.context.support;version="[${pkgVersion},5.4)",
+			org.springframework.core;version="[${pkgVersion},5.4)",
+			org.springframework.core.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.core.convert;version="[${pkgVersion},5.4)",
+			org.springframework.core.env;version="[${pkgVersion},5.4)",
+			org.springframework.core.io;version="[${pkgVersion},5.4)",
+			org.springframework.core.io.support;version="[${pkgVersion},5.4)",
+			org.springframework.core.log;version="[${pkgVersion},5.4)",
+			org.springframework.core.task;version="[${pkgVersion},5.4)",
+			org.springframework.expression;version="[${pkgVersion},5.4)",
+			org.springframework.expression.spel.standard;version="[${pkgVersion},5.4)",
+			org.springframework.expression.spel.support;version="[${pkgVersion},5.4)",
+			org.springframework.format;version="[${pkgVersion},5.4)",
+			org.springframework.format.support;version="[${pkgVersion},5.4)",
+			org.springframework.http;version="[${pkgVersion},5.4)",
+			org.springframework.http.codec;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.cbor;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.feed;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.json;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.smile;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.support;version="[${pkgVersion},5.4)",
+			org.springframework.http.converter.xml;version="[${pkgVersion},5.4)",
+			org.springframework.http.server;version="[${pkgVersion},5.4)",
+			org.springframework.lang;version="[${pkgVersion},5.4)",
+			org.springframework.objenesis;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.oxm;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.scripting.support;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.stereotype;version="[${pkgVersion},5.4)",
+			org.springframework.ui;version="[${pkgVersion},5.4)",
+			org.springframework.ui.context;version="[${pkgVersion},5.4)",
+			org.springframework.ui.context.support;version="[${pkgVersion},5.4)",
+			org.springframework.ui.freemarker;version="[${pkgVersion},5.4)",
+			org.springframework.util;version="[${pkgVersion},5.4)",
+			org.springframework.util.concurrent;version="[${pkgVersion},5.4)",
+			org.springframework.util.xml;version="[${pkgVersion},5.4)",
+			org.springframework.validation;version="[${pkgVersion},5.4)",
+			org.springframework.validation.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.validation.beanvalidation;version="[${pkgVersion},5.4)";resolution:=optional,
+			org.springframework.web;version="[${pkgVersion},5.4)",
+			org.springframework.web.accept;version="[${pkgVersion},5.4)",
+			org.springframework.web.bind;version="[${pkgVersion},5.4)",
+			org.springframework.web.bind.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.web.bind.support;version="[${pkgVersion},5.4)",
+			org.springframework.web.context;version="[${pkgVersion},5.4)",
+			org.springframework.web.context.request;version="[${pkgVersion},5.4)",
+			org.springframework.web.context.request.async;version="[${pkgVersion},5.4)",
+			org.springframework.web.context.support;version="[${pkgVersion},5.4)",
+			org.springframework.web.cors;version="[${pkgVersion},5.4)",
+			org.springframework.web.filter;version="[${pkgVersion},5.4)",
+			org.springframework.web.method;version="[${pkgVersion},5.4)",
+			org.springframework.web.method.annotation;version="[${pkgVersion},5.4)",
+			org.springframework.web.method.support;version="[${pkgVersion},5.4)",
+			org.springframework.web.multipart;version="[${pkgVersion},5.4)",
+			org.springframework.web.multipart.support;version="[${pkgVersion},5.4)",
+			org.springframework.web.server;version="[${pkgVersion},5.4)",
+			org.springframework.web.util;version="[${pkgVersion},5.4)",
+			org.springframework.web.util.pattern;version="[${pkgVersion},5.4)",
+			org.w3c.dom;resolution:=optional,
+			org.webjars;resolution:=optional,
+			org.xml.sax;resolution:=optional
+		</servicemix.osgi.import.pkg>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${pkgGroupId}</groupId>
+			<artifactId>${pkgArtifactId}</artifactId>
+			<version>${pkgVersion}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-expression</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- sources -->
+		<dependency>
+			<groupId>${pkgGroupId}</groupId>
+			<artifactId>${pkgArtifactId}</artifactId>
+			<version>${pkgVersion}</version>
+			<classifier>sources</classifier>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<artifactSet>
+								<includes>
+									<include>${pkgGroupId}:${pkgArtifactId}</include>
+								</includes>
+							</artifactSet>
+							<filters>
+								<filter>
+									<artifact>${pkgGroupId}:${pkgArtifactId}</artifact>
+									<includes>
+										<include>META-INF/*.tld</include>
+										<include>META-INF/spring.*</include>
+									</includes>
+								</filter>
+							</filters>
+							<promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+							<createDependencyReducedPom>true</createDependencyReducedPom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

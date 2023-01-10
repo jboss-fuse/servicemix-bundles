@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Licensed to the Apache Software Foundation (ASF) under one or more
+	contributor license agreements.  See the NOTICE file distributed with
+	this work for additional information regarding copyright ownership.
+	The ASF licenses this file to You under the Apache License, Version 2.0
+	(the "License"); you may not use this file except in compliance with
+	the License.  You may obtain a copy of the License at
+
+	   http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.servicemix</groupId>
+        <artifactId>servicemix-pom</artifactId>
+        <version>5</version>
+        <relativePath />
+    </parent>
+
+    <groupId>org.apache.servicemix.bundles</groupId>
+    <artifactId>org.apache.servicemix.bundles.spring-framwork-bundles</artifactId>
+    <packaging>pom</packaging>
+    <version>1-fuse-SNAPSHOT</version>
+
+    <name>Apache ServiceMix :: Bundles :: Spring Framework</name>
+
+    <modules>
+        <!-- check modules available in https://repo1.maven.org/maven2/org/springframework/spring-framework-bom/5.3.24/spring-framework-bom-5.3.24.pom -->
+        <module>spring-aop</module>
+        <module>spring-aspects</module>
+        <module>spring-beans</module>
+        <module>spring-context</module>
+        <module>spring-context-indexer</module>
+        <module>spring-context-support</module>
+        <module>spring-core</module>
+        <module>spring-expression</module>
+        <module>spring-instrument</module>
+        <!-- no need to productize spring-jcl, as it only contains org.apache.commons.logging package -->
+<!--        <module>spring-jcl</module>-->
+        <module>spring-jdbc</module>
+        <module>spring-jms</module>
+        <module>spring-messaging</module>
+        <module>spring-orm</module>
+        <module>spring-oxm</module>
+        <module>spring-r2dbc</module>
+        <module>spring-test</module>
+        <module>spring-tx</module>
+        <module>spring-webflux</module>
+        <module>spring-web</module>
+        <module>spring-webmvc</module>
+        <module>spring-websocket</module>
+    </modules>
+
+</project>
