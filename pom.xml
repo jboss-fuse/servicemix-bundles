@@ -26,12 +26,62 @@
          !!!!!!                                !!!!!!
          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
+
+    <!--
+        Upstream history of https://github.com/apache/servicemix-bundles/commits/master/pom.xml
+        shows that direct (first level) modules are added and removed for each SMX bundles release.
+        For example, with new Spring Framework bundles release, ~20 directories are removed (like
+        spring-core-5.3.20, spring-beans-5.3.20, ...) and the same amount of directories is added for
+        new version (like spring-core-5.3.24, spring-beans-5.3.24, ...)
+
+        jboss-fuse/servicemix-bundles fork will have different kind of direct dependencies - not
+        individual modules, but "projects". And only at 2nd level we'll have actual modules, but without
+        versions.
+        So instead of:
+
+            spring-core-5.3.20/
+            spring-beans-5.3.20/
+            ...
+            spring-security-core-5.7.6/
+            ...
+
+        We will have:
+
+            spring-framework/
+                spring-core/
+                spring-beans/
+                ...
+            spring-security/
+                spring-security-core/
+                ...
+
+        This pom keeps fixed version 1-fuse-SNAPSHOT and parent org.apache.servicemix:servicemix-pom:5
+        and is not published to Indy/MRRC.
+
+        First level modules (like spring-framework, spring-security) list
+        their own modules (2nd level). These:
+         - have "pom" packaging
+         - have version 1-fuse-SNAPSHOT just like this one
+         - have org.apache.servicemix:servicemix-pom:5 parent like this one with <relativePath />
+         - are not published to MRRC/Indy
+         - have org.apache.servicemix.bundles.<project-id>-bundles artifactId (e.g., "spring-framework-bundles")
+         - have "Apache ServiceMix :: Bundles :: <project name>" name
+
+        Second level modules are actual SMX bundles and:
+         - have "bundle" packaging
+         - have versions according to the bundles being produced
+         - have upstream parent org.apache.servicemix.bundles:bundles-pom:15 with <relativePath />
+         - are published to MRRC/Indy
+         - are listed in <modules> of 1st level modules (like spring-core under spring-framework)
+    -->
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.apache.servicemix</groupId>
         <artifactId>servicemix-pom</artifactId>
         <version>5</version>
+        <relativePath />
     </parent>
 
     <groupId>org.apache.servicemix.bundles</groupId>
@@ -41,22 +91,7 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-        <module>spring-security-acl-5.5.7</module>
-        <module>spring-security-aspects-5.5.7</module>
-        <module>spring-security-cas-5.5.7</module>
-        <module>spring-security-config-5.5.7</module>
-        <module>spring-security-core-5.5.7</module>
-        <module>spring-security-crypto-5.5.7</module>
-        <module>spring-security-data-5.5.7</module>
-        <module>spring-security-ldap-5.5.7</module>
-        <module>spring-security-messaging-5.5.7</module>
-        <module>spring-security-oauth2-client-5.5.7</module>
-        <module>spring-security-oauth2-core-5.5.7</module>
-        <module>spring-security-oauth2-jose-5.5.7</module>
-        <module>spring-security-remoting-5.5.7</module>
-        <module>spring-security-taglibs-5.5.7</module>
-        <module>spring-security-test-5.5.7</module>
-        <module>spring-security-web-5.5.7</module>
+        <module>spring-framework</module>
     </modules>
 
 </project>
