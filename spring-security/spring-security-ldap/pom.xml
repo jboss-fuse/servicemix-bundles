@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.servicemix.bundles</groupId>
+        <artifactId>bundles-pom</artifactId>
+        <version>15</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.apache.servicemix.bundles</groupId>
+    <artifactId>org.apache.servicemix.bundles.spring-security-ldap</artifactId>
+    <version>5.7.6_1-fuse-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+    <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
+
+    <scm>
+        <connection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/jboss-fuse/servicemix-bundles</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <pkgGroupId>org.springframework.security</pkgGroupId>
+        <pkgArtifactId>spring-security-ldap</pkgArtifactId>
+        <pkgVersion>5.7.6</pkgVersion>
+        <servicemix.osgi.source.version>5.7.6.1</servicemix.osgi.source.version>
+        <servicemix.osgi.export.pkg>
+            org.springframework.security.ldap
+        </servicemix.osgi.export.pkg>
+        <servicemix.osgi.import.pkg>
+            com.fasterxml.jackson.annotation;version="[2,3)";resolution:=optional,
+            com.fasterxml.jackson.core;version="[2,3)";resolution:=optional,
+            com.fasterxml.jackson.databind;version="[2,3)";resolution:=optional,
+            com.fasterxml.jackson.databind.module;version="[2,3)";resolution:=optional,
+            com.unboundid.ldap.listener;resolution:=optional,
+            com.unboundid.ldap.sdk;resolution:=optional,
+            com.unboundid.ldif;resolution:=optional,
+            javax.naming,
+            javax.naming.directory,
+            javax.naming.ldap,
+            netscape.ldap.ber.stream;resolution:=optional,
+            org.apache.commons.logging;version="[1.1.1,2)";resolution:=optional,
+            org.apache.directory.server.core;resolution:=optional,
+            org.apache.directory.server.core.authn;resolution:=optional,
+            org.apache.directory.server.core.changelog;resolution:=optional,
+            org.apache.directory.server.core.entry;resolution:=optional,
+            org.apache.directory.server.core.exception;resolution:=optional,
+            org.apache.directory.server.core.normalization;resolution:=optional,
+            org.apache.directory.server.core.operational;resolution:=optional,
+            org.apache.directory.server.core.partition;resolution:=optional,
+            org.apache.directory.server.core.partition.impl.btree.jdbm;resolution:=optional,
+            org.apache.directory.server.core.referral;resolution:=optional,
+            org.apache.directory.server.core.subtree;resolution:=optional,
+            org.apache.directory.server.ldap;resolution:=optional,
+            org.apache.directory.server.protocol.shared.store;resolution:=optional,
+            org.apache.directory.server.protocol.shared.transport;resolution:=optional,
+            org.apache.directory.shared.ldap.exception;resolution:=optional,
+            org.apache.directory.shared.ldap.name;resolution:=optional,
+            org.apache.mina.transport.socket;resolution:=optional,
+            org.springframework.beans;version="[5.3,6)",
+            org.springframework.beans.factory;version="[5.3,6)",
+            org.springframework.context;version="[5.3,6)",
+            org.springframework.context.support;version="[5.3,6)",
+            org.springframework.core.io;version="[5.3,6)",
+            org.springframework.core.io.support;version="[5.3,6)",
+            org.springframework.core.log;version="[5.3,6)",
+            org.springframework.dao;version="[5.3,6)";resolution:=optional,
+            org.springframework.ldap;version="[2.4,3)",
+            org.springframework.ldap.core;version="[2.4,3)",
+            org.springframework.ldap.core.support;version="[2.4,3)",
+            org.springframework.ldap.support;version="[2.4,3)",
+            org.springframework.security.authentication;version="[${pkgVersion},5.8)",
+            org.springframework.security.core;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.authority;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.authority.mapping;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.context;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.userdetails;version="[${pkgVersion},5.8)",
+            org.springframework.security.crypto.codec;version="[${pkgVersion},5.8)",
+            org.springframework.security.crypto.keygen;version="[${pkgVersion},5.8)",
+            org.springframework.security.crypto.password;version="[${pkgVersion},5.8)",
+            org.springframework.security.jackson2;version="[${pkgVersion},5.8)",
+            org.springframework.security.provisioning;version="[${pkgVersion},5.8)",
+            org.springframework.util;version="[5.3,6)"
+        </servicemix.osgi.import.pkg>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>${pkgArtifactId}</artifactId>
+            <version>${pkgVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.ldap</groupId>
+                    <artifactId>spring-ldap-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-tx</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- sources -->
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>${pkgArtifactId}</artifactId>
+            <version>${pkgVersion}</version>
+            <classifier>sources</classifier>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>${pkgGroupId}:${pkgArtifactId}</include>
+                                </includes>
+                            </artifactSet>
+                            <filters>
+                                <filter>
+                                    <artifact>${pkgGroupId}:${pkgArtifactId}</artifact>
+                                    <excludes>
+                                        <exclude>**/*</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                            <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+                            <createDependencyReducedPom>true</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

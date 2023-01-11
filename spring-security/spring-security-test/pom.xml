@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.servicemix.bundles</groupId>
+        <artifactId>bundles-pom</artifactId>
+        <version>15</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.apache.servicemix.bundles</groupId>
+    <artifactId>org.apache.servicemix.bundles.spring-security-test</artifactId>
+    <version>5.7.6_1-fuse-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+    <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
+
+    <scm>
+        <connection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</connection>
+        <developerConnection>scm:git:https://github.com/jboss-fuse/servicemix-bundles.git</developerConnection>
+        <url>https://github.com/jboss-fuse/servicemix-bundles</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <pkgGroupId>org.springframework.security</pkgGroupId>
+        <pkgArtifactId>spring-security-test</pkgArtifactId>
+        <pkgVersion>5.7.6</pkgVersion>
+        <servicemix.osgi.source.version>5.7.6.1</servicemix.osgi.source.version>
+        <servicemix.osgi.export.pkg>
+            org.springframework.security.test
+        </servicemix.osgi.export.pkg>
+        <servicemix.osgi.import.pkg>
+            javax.servlet,
+            javax.servlet.http,
+            org.reactivestreams;version="[1.0,2)";resolution:=optional,
+            org.springframework.beans;version="[5.3,6)",
+            org.springframework.beans.factory;version="[5.3,6)",
+            org.springframework.beans.factory.annotation;version="[5.3,6)",
+            org.springframework.beans.factory.config;version="[5.3,6)",
+            org.springframework.context;version="[5.3,6)",
+            org.springframework.core;version="[5.3,6)",
+            org.springframework.core.annotation;version="[5.3,6)",
+            org.springframework.core.convert.converter;version="[5.3,6)",
+            org.springframework.core.io;version="[5.3,6)",
+            org.springframework.http;version="[5.3,6)",
+            org.springframework.http.client.reactive;version="[5.3,6)",
+            org.springframework.lang;version="[5.3,6)",
+            org.springframework.mock.web;version="[5.3,6)",
+            org.springframework.security.authentication;version="[${pkgVersion},5.8)",
+            org.springframework.security.core;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.authority;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.context;version="[${pkgVersion},5.8)",
+            org.springframework.security.core.userdetails;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.authentication;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.registration;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.web;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.web.method.annotation;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.web.reactive.result.method.annotation;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.client.web.server;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.core;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.core.oidc;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.core.oidc.user;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.core.user;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.jwt;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.server.resource.authentication;version="[${pkgVersion},5.8)",
+            org.springframework.security.oauth2.server.resource.introspection;version="[${pkgVersion},5.8)",
+            org.springframework.security.web.context;version="[${pkgVersion},5.8)",
+            org.springframework.security.web.csrf;version="[${pkgVersion},5.8)",
+            org.springframework.security.web.server.csrf;version="[${pkgVersion},5.8)",
+            org.springframework.security.web.server.util.matcher;version="[${pkgVersion},5.8)",
+            org.springframework.test.context;version="[5.3,6)",
+            org.springframework.test.context.support;version="[5.3,6)",
+            org.springframework.test.util;version="[5.3,6)",
+            org.springframework.test.web.reactive.server;version="[5.3,6)",
+            org.springframework.test.web.servlet;version="[5.3,6)",
+            org.springframework.test.web.servlet.request;version="[5.3,6)",
+            org.springframework.test.web.servlet.setup;version="[5.3,6)",
+            org.springframework.util;version="[5.3,6)",
+            org.springframework.web.context;version="[5.3,6)",
+            org.springframework.web.context.support;version="[5.3,6)",
+            org.springframework.web.method.support;version="[5.3,6)",
+            org.springframework.web.reactive.result.method;version="[5.3,6)",
+            org.springframework.web.reactive.result.method.annotation;version="[5.3,6)",
+            org.springframework.web.server;version="[5.3,6)",
+            org.springframework.web.server.adapter;version="[5.3,6)",
+            org.springframework.web.servlet.mvc.method.annotation;version="[5.3,6)",
+            org.springframework.web.util;version="[5.3,6)",
+            reactor.core;resolution:=optional,
+            reactor.core.publisher;resolution:=optional,
+            reactor.util.context;resolution:=optional
+        </servicemix.osgi.import.pkg>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>${pkgArtifactId}</artifactId>
+            <version>${pkgVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-test</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- sources -->
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>${pkgArtifactId}</artifactId>
+            <version>${pkgVersion}</version>
+            <classifier>sources</classifier>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>${pkgGroupId}:${pkgArtifactId}</include>
+                                </includes>
+                            </artifactSet>
+                            <filters>
+                                <filter>
+                                    <artifact>${pkgGroupId}:${pkgArtifactId}</artifact>
+                                    <includes>
+                                        <include>META-INF/spring.*</include>
+                                    </includes>
+                                </filter>
+                            </filters>
+                            <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+                            <createDependencyReducedPom>true</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
