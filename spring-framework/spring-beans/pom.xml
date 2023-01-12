@@ -31,7 +31,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-beans</artifactId>
-    <version>5.3.24_1-fuse-SNAPSHOT</version>
+    <version>5.3.25_1-fuse-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -45,8 +45,8 @@
     <properties>
         <pkgGroupId>org.springframework</pkgGroupId>
         <pkgArtifactId>spring-beans</pkgArtifactId>
-        <pkgVersion>5.3.24</pkgVersion>
-        <servicemix.osgi.source.version>5.3.24.1</servicemix.osgi.source.version>
+        <pkgVersion>5.3.25</pkgVersion>
+        <servicemix.osgi.source.version>5.3.25.1</servicemix.osgi.source.version>
         <servicemix.osgi.export.pkg>
             org.springframework.beans
         </servicemix.osgi.export.pkg>
