@@ -36,7 +36,7 @@
     <name>Apache ServiceMix :: Bundles :: Spring Security</name>
 
     <modules>
-        <!-- check modules available in https://repo1.maven.org/maven2/org/springframework/security/spring-security-bom/5.7.7/spring-security-bom-5.7.7.pom -->
+        <!-- check modules available in https://repo1.maven.org/maven2/org/springframework/security/spring-security-bom/5.7.8/spring-security-bom-5.7.8.pom -->
         <module>spring-security-acl</module>
         <module>spring-security-aspects</module>
         <module>spring-security-cas</module>
