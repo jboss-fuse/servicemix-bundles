@@ -31,7 +31,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-instrument</artifactId>
-    <version>5.3.27_1-fuse-SNAPSHOT</version>
+    <version>5.3.30_1-fuse-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -45,8 +45,8 @@
     <properties>
         <pkgGroupId>org.springframework</pkgGroupId>
         <pkgArtifactId>spring-instrument</pkgArtifactId>
-        <pkgVersion>5.3.27</pkgVersion>
-        <servicemix.osgi.source.version>5.3.27.1</servicemix.osgi.source.version>
+        <pkgVersion>5.3.30</pkgVersion>
+        <servicemix.osgi.source.version>5.3.30.1</servicemix.osgi.source.version>
         <servicemix.osgi.export.pkg>
             org.springframework.instrument
         </servicemix.osgi.export.pkg>
