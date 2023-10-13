@@ -46,10 +46,10 @@
         <pkgGroupId>com.squareup.okio</pkgGroupId>
         <pkgArtifactId>okio</pkgArtifactId>
         <pkgVersion>1.15.0.redhat-00004</pkgVersion>
-        <servicemix.osgi.export.pkg>
-            okio;version="${pkgVersion}",
-            okio;version="1.2"
-        </servicemix.osgi.export.pkg>
+        <servicemix.osgi.export>
+            okio;version=${pkgVersion};-split-package:=merge-first,
+            okio;version=1.2;-split-package:=merge-first
+        </servicemix.osgi.export>
         <servicemix.osgi.import.pkg>
             *
         </servicemix.osgi.import.pkg>
