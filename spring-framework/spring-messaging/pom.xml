@@ -31,7 +31,7 @@
 
     <groupId>org.apache.servicemix.bundles</groupId>
     <artifactId>org.apache.servicemix.bundles.spring-messaging</artifactId>
-    <version>5.3.30_1-fuse-SNAPSHOT</version>
+    <version>5.3.31_1-fuse-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache ServiceMix :: Bundles :: ${pkgArtifactId}</name>
 
@@ -45,8 +45,8 @@
     <properties>
         <pkgGroupId>org.springframework</pkgGroupId>
         <pkgArtifactId>spring-messaging</pkgArtifactId>
-        <pkgVersion>5.3.30</pkgVersion>
-        <servicemix.osgi.source.version>5.3.30.1</servicemix.osgi.source.version>
+        <pkgVersion>5.3.31</pkgVersion>
+        <servicemix.osgi.source.version>5.3.31.1</servicemix.osgi.source.version>
         <servicemix.osgi.export.pkg>
             org.springframework.messaging
         </servicemix.osgi.export.pkg>
