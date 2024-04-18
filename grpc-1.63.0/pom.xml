@@ -59,7 +59,6 @@
            !com.google.re2j,
            !com.ning.compress.*,
            !com.oracle.svm.core.annotate,
-           !com.sun.jndi.dns,
            !io.grpc.census.*,
            !io.grpc.override.*,
            !io.netty.channel.epoll.*,
@@ -76,8 +75,12 @@
            !org.mockito*,
            !org.junit*,
            !com.google.common.truth*,
+           !io.perfmark.*,
            *
         </servicemix.osgi.import.pkg>
+        <servicemix.osgi.private.pkg>
+            io.perfmark
+        </servicemix.osgi.private.pkg>
     </properties>
 
     <dependencies>
