@@ -91,10 +91,11 @@
     <name>Apache ServiceMix :: Bundles</name>
 
     <modules>
-        <module>spring-framework</module>
+        <!--module>spring-framework</module-->
         <!--module>spring-security</module-->
         <!--module>kafka-clients-3.1.0-redhat-00009</module-->
         <!--module>okio-1.15.0</module-->
+        <module>grpc-1.63.0</module>
     </modules>
 
 </project>
