@@ -95,7 +95,9 @@
         <!--module>spring-security</module-->
         <!--module>kafka-clients-3.1.0-redhat-00009</module-->
         <!--module>okio-1.15.0</module-->
-        <module>grpc-1.63.0</module>
+        <!--module>grpc-1.63.0</module-->
+        <module>avro-1.11.4</module>
+        <module>avro-ipc-1.11.4</module>
     </modules>
 
 </project>
