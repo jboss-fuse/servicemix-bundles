@@ -45,7 +45,7 @@
     <properties>
         <pkgGroupId>org.apache.avro</pkgGroupId>
         <pkgArtifactId>avro-ipc</pkgArtifactId>
-        <pkgVersion>1.11.4.redhat-00001</pkgVersion>
+        <pkgVersion>1.11.4</pkgVersion>
         <servicemix.osgi.export>
             org.apache.avro.ipc*;version="${project.version}";-noimport:=true;-split-package:=merge-first
         </servicemix.osgi.export>
@@ -65,6 +65,12 @@
             <groupId>${pkgGroupId}</groupId>
             <artifactId>${pkgArtifactId}</artifactId>
             <version>${pkgVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.xerial.snappy</groupId>
+                    <artifactId>snappy-java</artifactId>
+                </exclusion>
+            </exclusions>
             <optional>false</optional>
         </dependency>
 
